@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block myblock %}
+
+{% if school %}
+lololo
+{% else %}
+no context found
+{% endif %}
+  <div class="jumbotron">
+
+    <h1>Welcome to the  Schools Page!</h1>
+      <ol>
+        {{school.name}}
+      </ol>
+{% for i in school.students.all %}
+{{i.name}}
+{% endfor %}
+  </div>
+
+
+{% endblock %}
